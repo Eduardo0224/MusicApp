@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B210BF101C29A72100F805B8 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B210BF0F1C29A72100F805B8 /* TableViewController.swift */; };
+		B26705D11C2C0DA100B9F80C /* Anachromie-large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B26705CF1C2C0DA100B9F80C /* Anachromie-large.jpg */; };
+		B26705D21C2C0DA100B9F80C /* The Forgotten Goddess-large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B26705D01C2C0DA100B9F80C /* The Forgotten Goddess-large.jpg */; };
+		B296B77B1C29ACBF00C8425C /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296B77A1C29ACBF00C8425C /* SongTableViewCell.swift */; };
+		B296B77D1C29B19F00C8425C /* DataMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296B77C1C29B19F00C8425C /* DataMusic.swift */; };
+		B2AE14331C2B4EF600251D96 /* dismiss-small.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AE14321C2B4EF600251D96 /* dismiss-small.png */; };
+		B2D03A9E1C28957500F8A9AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D03A9D1C28957500F8A9AE /* AppDelegate.swift */; };
+		B2D03AA31C28957500F8A9AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D03AA11C28957500F8A9AE /* Main.storyboard */; };
+		B2D03AA51C28957500F8A9AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D03AA41C28957500F8A9AE /* Assets.xcassets */; };
+		B2D03AA81C28957500F8A9AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D03AA61C28957500F8A9AE /* LaunchScreen.storyboard */; };
+		B2D0837C1C2D7FE10083BD41 /* volumen-off.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D0837A1C2D7FE10083BD41 /* volumen-off.png */; };
+		B2D0837D1C2D7FE10083BD41 /* volumen-on.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D0837B1C2D7FE10083BD41 /* volumen-on.png */; };
+		B2D083811C2D83010083BD41 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D083801C2D83010083BD41 /* playButton.png */; };
+		B2D083841C2D86310083BD41 /* pauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D083821C2D86310083BD41 /* pauseButton.png */; };
+		B2D083851C2D86310083BD41 /* stopButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D083831C2D86310083BD41 /* stopButton.png */; };
+		B2D083871C2D87820083BD41 /* shuffleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B2D083861C2D87820083BD41 /* shuffleButton.png */; };
+		B2D6DBE91C2AC3CC000EBC03 /* PlaySongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6DBE81C2AC3CC000EBC03 /* PlaySongViewController.swift */; };
+		B2DF5C431C28A1950053560E /* The Forgotten Goddess.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2DF5C421C28A1950053560E /* The Forgotten Goddess.jpg */; };
+		B2DF5C451C28A1E30053560E /* Anachromie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2DF5C441C28A1E30053560E /* Anachromie.jpg */; };
+		B2E1CCD21C2EB4A700A98A8E /* Bleu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2E1CCCD1C2EB4A700A98A8E /* Bleu.mp3 */; };
+		B2E1CCD31C2EB4A700A98A8E /* Illusion d'une aire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2E1CCCE1C2EB4A700A98A8E /* Illusion d'une aire.mp3 */; };
+		B2E1CCD41C2EB4A700A98A8E /* L'heure que le temps va figer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2E1CCCF1C2EB4A700A98A8E /* L'heure que le temps va figer.mp3 */; };
+		B2E1CCD51C2EB4A700A98A8E /* Se taire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2E1CCD01C2EB4A700A98A8E /* Se taire.mp3 */; };
+		B2E1CCD61C2EB4A700A98A8E /* Voices in a dream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2E1CCD11C2EB4A700A98A8E /* Voices in a dream.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B210BF0F1C29A72100F805B8 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B26705CF1C2C0DA100B9F80C /* Anachromie-large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Anachromie-large.jpg"; sourceTree = "<group>"; };
+		B26705D01C2C0DA100B9F80C /* The Forgotten Goddess-large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Forgotten Goddess-large.jpg"; sourceTree = "<group>"; };
+		B296B77A1C29ACBF00C8425C /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
+		B296B77C1C29B19F00C8425C /* DataMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMusic.swift; sourceTree = "<group>"; };
+		B2AE14321C2B4EF600251D96 /* dismiss-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dismiss-small.png"; sourceTree = "<group>"; };
+		B2D03A9A1C28957500F8A9AE /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2D03A9D1C28957500F8A9AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2D03AA21C28957500F8A9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2D03AA41C28957500F8A9AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2D03AA71C28957500F8A9AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2D03AA91C28957500F8A9AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2D0837A1C2D7FE10083BD41 /* volumen-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volumen-off.png"; sourceTree = "<group>"; };
+		B2D0837B1C2D7FE10083BD41 /* volumen-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volumen-on.png"; sourceTree = "<group>"; };
+		B2D083801C2D83010083BD41 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		B2D083821C2D86310083BD41 /* pauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pauseButton.png; sourceTree = "<group>"; };
+		B2D083831C2D86310083BD41 /* stopButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stopButton.png; sourceTree = "<group>"; };
+		B2D083861C2D87820083BD41 /* shuffleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuffleButton.png; sourceTree = "<group>"; };
+		B2D6DBE81C2AC3CC000EBC03 /* PlaySongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySongViewController.swift; sourceTree = "<group>"; };
+		B2DF5C421C28A1950053560E /* The Forgotten Goddess.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "The Forgotten Goddess.jpg"; sourceTree = "<group>"; };
+		B2DF5C441C28A1E30053560E /* Anachromie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Anachromie.jpg; sourceTree = "<group>"; };
+		B2E1CCCD1C2EB4A700A98A8E /* Bleu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bleu.mp3; sourceTree = "<group>"; };
+		B2E1CCCE1C2EB4A700A98A8E /* Illusion d'une aire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Illusion d'une aire.mp3"; sourceTree = "<group>"; };
+		B2E1CCCF1C2EB4A700A98A8E /* L'heure que le temps va figer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "L'heure que le temps va figer.mp3"; sourceTree = "<group>"; };
+		B2E1CCD01C2EB4A700A98A8E /* Se taire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Se taire.mp3"; sourceTree = "<group>"; };
+		B2E1CCD11C2EB4A700A98A8E /* Voices in a dream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Voices in a dream.mp3"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2D03A971C28957500F8A9AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2D03A911C28957500F8A9AE = {
+			isa = PBXGroup;
+			children = (
+				B2D03A9C1C28957500F8A9AE /* MusicApp */,
+				B2D03A9B1C28957500F8A9AE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2D03A9B1C28957500F8A9AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2D03A9A1C28957500F8A9AE /* MusicApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2D03A9C1C28957500F8A9AE /* MusicApp */ = {
+			isa = PBXGroup;
+			children = (
+				B2E1CCCC1C2EAD1800A98A8E /* canciones */,
+				B2FBB6171C2C0D4A002D2F39 /* ImagenesPoratadas */,
+				B2AE14321C2B4EF600251D96 /* dismiss-small.png */,
+				B2D03A9D1C28957500F8A9AE /* AppDelegate.swift */,
+				B2D03AA11C28957500F8A9AE /* Main.storyboard */,
+				B2D03AA41C28957500F8A9AE /* Assets.xcassets */,
+				B2D03AA61C28957500F8A9AE /* LaunchScreen.storyboard */,
+				B2D03AA91C28957500F8A9AE /* Info.plist */,
+				B210BF0F1C29A72100F805B8 /* TableViewController.swift */,
+				B296B77A1C29ACBF00C8425C /* SongTableViewCell.swift */,
+				B296B77C1C29B19F00C8425C /* DataMusic.swift */,
+				B2D6DBE81C2AC3CC000EBC03 /* PlaySongViewController.swift */,
+			);
+			path = MusicApp;
+			sourceTree = "<group>";
+		};
+		B2E1CCCC1C2EAD1800A98A8E /* canciones */ = {
+			isa = PBXGroup;
+			children = (
+				B2E1CCCD1C2EB4A700A98A8E /* Bleu.mp3 */,
+				B2E1CCCE1C2EB4A700A98A8E /* Illusion d'une aire.mp3 */,
+				B2E1CCCF1C2EB4A700A98A8E /* L'heure que le temps va figer.mp3 */,
+				B2E1CCD01C2EB4A700A98A8E /* Se taire.mp3 */,
+				B2E1CCD11C2EB4A700A98A8E /* Voices in a dream.mp3 */,
+			);
+			name = canciones;
+			sourceTree = "<group>";
+		};
+		B2FBB6171C2C0D4A002D2F39 /* ImagenesPoratadas */ = {
+			isa = PBXGroup;
+			children = (
+				B2D083861C2D87820083BD41 /* shuffleButton.png */,
+				B2D083821C2D86310083BD41 /* pauseButton.png */,
+				B2D083831C2D86310083BD41 /* stopButton.png */,
+				B2D083801C2D83010083BD41 /* playButton.png */,
+				B2D0837A1C2D7FE10083BD41 /* volumen-off.png */,
+				B2D0837B1C2D7FE10083BD41 /* volumen-on.png */,
+				B26705CF1C2C0DA100B9F80C /* Anachromie-large.jpg */,
+				B26705D01C2C0DA100B9F80C /* The Forgotten Goddess-large.jpg */,
+				B2DF5C441C28A1E30053560E /* Anachromie.jpg */,
+				B2DF5C421C28A1950053560E /* The Forgotten Goddess.jpg */,
+			);
+			name = ImagenesPoratadas;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2D03A991C28957500F8A9AE /* MusicApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2D03AAC1C28957500F8A9AE /* Build configuration list for PBXNativeTarget "MusicApp" */;
+			buildPhases = (
+				B2D03A961C28957500F8A9AE /* Sources */,
+				B2D03A971C28957500F8A9AE /* Frameworks */,
+				B2D03A981C28957500F8A9AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicApp;
+			productName = MusicApp;
+			productReference = B2D03A9A1C28957500F8A9AE /* MusicApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2D03A921C28957500F8A9AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = EduardoAndrade;
+				TargetAttributes = {
+					B2D03A991C28957500F8A9AE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = B2D03A951C28957500F8A9AE /* Build configuration list for PBXProject "MusicApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B2D03A911C28957500F8A9AE;
+			productRefGroup = B2D03A9B1C28957500F8A9AE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2D03A991C28957500F8A9AE /* MusicApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2D03A981C28957500F8A9AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2D083841C2D86310083BD41 /* pauseButton.png in Resources */,
+				B2D03AA81C28957500F8A9AE /* LaunchScreen.storyboard in Resources */,
+				B2DF5C451C28A1E30053560E /* Anachromie.jpg in Resources */,
+				B26705D11C2C0DA100B9F80C /* Anachromie-large.jpg in Resources */,
+				B2D083811C2D83010083BD41 /* playButton.png in Resources */,
+				B2E1CCD41C2EB4A700A98A8E /* L'heure que le temps va figer.mp3 in Resources */,
+				B2D03AA51C28957500F8A9AE /* Assets.xcassets in Resources */,
+				B2DF5C431C28A1950053560E /* The Forgotten Goddess.jpg in Resources */,
+				B2D0837C1C2D7FE10083BD41 /* volumen-off.png in Resources */,
+				B2D083851C2D86310083BD41 /* stopButton.png in Resources */,
+				B2E1CCD61C2EB4A700A98A8E /* Voices in a dream.mp3 in Resources */,
+				B2D0837D1C2D7FE10083BD41 /* volumen-on.png in Resources */,
+				B2E1CCD21C2EB4A700A98A8E /* Bleu.mp3 in Resources */,
+				B2D03AA31C28957500F8A9AE /* Main.storyboard in Resources */,
+				B2E1CCD51C2EB4A700A98A8E /* Se taire.mp3 in Resources */,
+				B2E1CCD31C2EB4A700A98A8E /* Illusion d'une aire.mp3 in Resources */,
+				B2D083871C2D87820083BD41 /* shuffleButton.png in Resources */,
+				B2AE14331C2B4EF600251D96 /* dismiss-small.png in Resources */,
+				B26705D21C2C0DA100B9F80C /* The Forgotten Goddess-large.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2D03A961C28957500F8A9AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B296B77B1C29ACBF00C8425C /* SongTableViewCell.swift in Sources */,
+				B296B77D1C29B19F00C8425C /* DataMusic.swift in Sources */,
+				B2D03A9E1C28957500F8A9AE /* AppDelegate.swift in Sources */,
+				B2D6DBE91C2AC3CC000EBC03 /* PlaySongViewController.swift in Sources */,
+				B210BF101C29A72100F805B8 /* TableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B2D03AA11C28957500F8A9AE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2D03AA21C28957500F8A9AE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B2D03AA61C28957500F8A9AE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2D03AA71C28957500F8A9AE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2D03AAA1C28957500F8A9AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B2D03AAB1C28957500F8A9AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2D03AAD1C28957500F8A9AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MusicApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eduardoandrade.MusicApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B2D03AAE1C28957500F8A9AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MusicApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eduardoandrade.MusicApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2D03A951C28957500F8A9AE /* Build configuration list for PBXProject "MusicApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2D03AAA1C28957500F8A9AE /* Debug */,
+				B2D03AAB1C28957500F8A9AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2D03AAC1C28957500F8A9AE /* Build configuration list for PBXNativeTarget "MusicApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2D03AAD1C28957500F8A9AE /* Debug */,
+				B2D03AAE1C28957500F8A9AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2D03A921C28957500F8A9AE /* Project object */;
+}
