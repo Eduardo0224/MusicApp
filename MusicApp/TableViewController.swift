@@ -21,10 +21,10 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.tableView.separatorStyle = .SingleLine
+        self.tableView.separatorStyle = .singleLine
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tableView.reloadData()
     }
@@ -35,21 +35,19 @@ class TableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return musica.canciones.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! SongTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) as! SongTableViewCell
         
         let cancionActual = musica.canciones[indexPath.row]
         let imgPortada = UIImage(named: "\(cancionActual.portada).jpg")
@@ -69,31 +67,29 @@ class TableViewController: UITableViewController {
         
         return cell
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)  {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! SongTableViewCell
-        cell.lblCantante.textColor = UIColor.whiteColor()
-        cell.lblTitulo.textColor = UIColor.whiteColor()
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath as IndexPath) as! SongTableViewCell
+        cell.lblCantante.textColor = UIColor.white
+        cell.lblTitulo.textColor = UIColor.white
     }
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! SongTableViewCell
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! SongTableViewCell
         cell.lblCantante.textColor = UIColor(red: 169 / 255, green: 169 / 255, blue: 169 / 255, alpha: 1)
         cell.lblTitulo.textColor = UIColor(red: 100 / 255, green: 100 / 255, blue: 100 / 255, alpha: 1)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? SongTableViewCell {
-            _ = tableView.indexPathForCell(cell)!.row
+            _ = tableView.indexPath(for: cell)!.row
             if segue.identifier == "segueSong" {
                 
-                let modalV = segue.destinationViewController as! PlaySongViewController
+                let modalV = segue.destination as! PlaySongViewController
                 modalV.portadaString = musica.canciones[(self.tableView.indexPathForSelectedRow?.row)!].portada
                 modalV.tituloString = musica.canciones[(self.tableView.indexPathForSelectedRow?.row)!].titulo
                 modalV.cantanteString = musica.canciones[(self.tableView.indexPathForSelectedRow?.row)!].cantante
             }
         }
-       
     }
     
     

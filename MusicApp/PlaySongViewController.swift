@@ -32,17 +32,15 @@ class PlaySongViewController: UIViewController, AVAudioPlayerDelegate {
     private var reproductor : AVAudioPlayer!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
+        super.viewDidLoad()      
         
         // Do any additional setup after loading the view.
         // Encontrar el Path (en un solo paso se convierte a URL)
-        let cancionURL = NSBundle.mainBundle().URLForResource("\(tituloString)", withExtension: "mp3")
-        
+        let cancionURL = URL(fileURLWithPath: Bundle.main.path(forResource: "\(tituloString!).mp3", ofType: nil)!)
+
         // Hacer la conexión con try catch
         do {
-            try reproductor = AVAudioPlayer(contentsOfURL: cancionURL!)
+            reproductor = try AVAudioPlayer(contentsOf: cancionURL)
         } catch {
             print("Error al cargar el archivo de sonido \(tituloString).mp3")
         }
@@ -53,30 +51,30 @@ class PlaySongViewController: UIViewController, AVAudioPlayerDelegate {
         PlaySong()
         
         let fixItView = UIView()
-        fixItView.frame = CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, 20);
+        fixItView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20)
         fixItView.backgroundColor = UIColor(red: 60 / 255, green: 56 / 255, blue: 56 / 255, alpha: 1) // your colour
         view.addSubview( fixItView )
         
         
-        imgPortadaDetalle.image = UIImage(named: "\(portadaString)-large.jpg")
-        imgPortadaBackground.image = UIImage(named: "\(portadaString)-large.jpg")
+        imgPortadaDetalle.image = UIImage(named: "\(portadaString!)-large.jpg")
+        imgPortadaBackground.image = UIImage(named: "\(portadaString!)-large.jpg")
         
         lblCantante.text = cantanteString
         lblTituloCancion.text = tituloString
         lblAlbum.text = portadaString
         
         // Sombra
-        shadow = UIView(frame: CGRectMake(imgPortadaDetalle.frame.origin.x,
-                                              imgPortadaDetalle.frame.origin.y,
-                                              imgPortadaDetalle.frame.width,
-                                              imgPortadaDetalle.frame.height))
+        shadow = UIView(frame: CGRect(x: imgPortadaDetalle.frame.origin.x,
+                                      y: imgPortadaDetalle.frame.origin.y,
+                                      width: imgPortadaDetalle.frame.width,
+                                      height: imgPortadaDetalle.frame.height))
         
 
         
         
-        shadow.backgroundColor = UIColor.grayColor()
+        shadow.backgroundColor = UIColor.gray
         shadow.layer.shadowOpacity = 0.1
-        shadow.layer.shadowOffset = CGSizeMake(2, 10)
+        shadow.layer.shadowOffset = CGSize(width: 2, height: 10)
         shadow.layer.cornerRadius = 8
         self.view.addSubview(shadow)
         
@@ -88,20 +86,20 @@ class PlaySongViewController: UIViewController, AVAudioPlayerDelegate {
         imgPortadaDetalle.layer.cornerRadius = 8
         // ----------
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         
         //always fill the view
         blurEffectView.frame = self.imgPortadaBackground.bounds
-        blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.imgPortadaBackground.addSubview(blurEffectView)
     }
     
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         print("termino la cancion")
         flagSourceImagePlayButton = false
-        playSongButton.setImage(UIImage(named: "playButton"), forState: .Normal)
+        playSongButton.setImage(UIImage(named: "playButton"), for: .normal)
         reproductor.currentTime = 0.0
     }
 
@@ -110,14 +108,14 @@ class PlaySongViewController: UIViewController, AVAudioPlayerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        UIApplication.shared.statusBarStyle = .lightContent
 
     }
     
@@ -128,18 +126,18 @@ class PlaySongViewController: UIViewController, AVAudioPlayerDelegate {
 
     @IBAction func ajustarVolumen(sender: AnyObject) {
         if reproductor != nil {
-            reproductor?.volume = sliderVolume.value
+            reproductor.volume = sliderVolume.value
         }
     }
     
     @IBAction func StopSong() {
-        if !reproductor.playing {
+        if !reproductor.isPlaying {
             reproductor.stop()
             reproductor.currentTime = 0.0
         }
         else {
             flagSourceImagePlayButton = false
-            playSongButton.setImage(UIImage(named: "playButton"), forState: .Normal)
+            playSongButton.setImage(UIImage(named: "playButton"), for: .normal)
             reproductor.stop()
             reproductor.currentTime = 0.0
         }
@@ -152,10 +150,10 @@ class PlaySongViewController: UIViewController, AVAudioPlayerDelegate {
         let cancionAleatoria = dataMusic.canciones.randomItem()
 
         // Encontrar el Path (en un solo paso se convierte a URL)
-        let cancionURL = NSBundle.mainBundle().URLForResource("\(cancionAleatoria.titulo)", withExtension: "mp3")
+        let cancionURL = Bundle.main.url(forResource: "\(cancionAleatoria.titulo)", withExtension: "mp3")
         // Hacer la conexión con try catch
         do {
-            try reproductor = AVAudioPlayer(contentsOfURL: cancionURL!)
+            try reproductor = AVAudioPlayer(contentsOf: cancionURL!)
         } catch {
             print("Error al cargar el archivo de sonido \(cancionAleatoria.titulo).mp3")
         }
@@ -176,15 +174,15 @@ class PlaySongViewController: UIViewController, AVAudioPlayerDelegate {
         flagSourceImagePlayButton = !flagSourceImagePlayButton
         
         if flagSourceImagePlayButton {
-            playSongButton.setImage(UIImage(named: "pauseButton"), forState: .Normal)
-            if !reproductor.playing {
+            playSongButton.setImage(UIImage(named: "pauseButton"), for: .normal)
+            if !reproductor.isPlaying {
                 reproductor.play()
                 
             }
         }
         else {
-            playSongButton.setImage(UIImage(named: "playButton"), forState: .Normal)
-            if reproductor.playing {
+            playSongButton.setImage(UIImage(named: "playButton"), for: .normal)
+            if reproductor.isPlaying {
                 reproductor.pause()
             }
         }
@@ -200,6 +198,6 @@ class PlaySongViewController: UIViewController, AVAudioPlayerDelegate {
     */
 
     @IBAction func dismissModalView() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
